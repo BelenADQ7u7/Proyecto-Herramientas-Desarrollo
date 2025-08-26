@@ -1,4 +1,4 @@
 # Proyecto-Herramientas-Desarrollo
 prueba
-Añadir diagrama
+Verificar .jar
 Investigar Portabilidad
