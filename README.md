@@ -1,4 +1,4 @@
 # Proyecto-Herramientas-Desarrollo
 prueba
-Verificar .jar
+Verificar .jar actualizado 
 Investigar Portabilidad
