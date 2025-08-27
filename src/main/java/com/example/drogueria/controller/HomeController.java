@@ -7,18 +7,22 @@ import org.springframework.ui.Model;
 @Controller
 public class HomeController {
     @GetMapping("/")
-    public String index(Model model) {
-        model.addAttribute("titulo","IGAN PERUANA");
-        return "index";
+    public String home() {
+        return "index"; // index.html en templates/
     }
 
     @GetMapping("/empresa")
     public String empresa() {
-        return "empresa"; // vista empresa.html
+        return "empresa"; // empresa.html
+    }
+
+    @GetMapping("/productos")
+    public String productos() {
+        return "productos"; // productos.html
     }
 
     @GetMapping("/contacto")
-    public String contactanos() {
-        return "contacto"; // vista contacto.html
+    public String contacto() {
+        return "contacto"; // contacto.html
     }
 }
