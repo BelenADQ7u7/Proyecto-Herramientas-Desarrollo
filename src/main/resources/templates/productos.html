@@ -1,12 +1,139 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Productos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos - Droguería IGAN</title>
+  <link rel="stylesheet" href="stylesproductos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Productos</h1>
-<h2>Categorías</h2>
-<a th:href="@{/}">Volver al inicio</a>
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">IGAN</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="empresa.html">Empresa</a></li>
+      <li><a href="productos.html" class="active">Productos</a></li>
+      <li><a href="contacto.html">Contáctanos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+  <div class="banner-text">
+    <h1>Productos</h1>
+    <p>Explora nuestro catálogo de productos farmacéuticos y encuentra lo que necesitas para tu salud.</p>
+  </div>
+</section>
+
+<!-- BUSCADOR Y FILTROS -->
+<section class="search-filter">
+  <input type="text" placeholder="Buscar productos..." class="search-bar">
+  <select class="filter">
+    <option value="">Categoría</option>
+    <option value="medicamentos">Medicamentos</option>
+    <option value="vitaminas">Vitaminas</option>
+    <option value="cuidado">Cuidado personal</option>
+  </select>
+  <select class="filter">
+    <option value="">Marca</option>
+    <option value="marca1">Marca 1</option>
+    <option value="marca2">Marca 2</option>
+  </select>
+</section>
+
+<!-- CATEGORÍAS -->
+<section class="categories">
+  <h2>Categorías</h2>
+  <div class="category-grid">
+    <div class="category-card">
+      <img src="img/medicamentos.png" alt="Medicamentos">
+      <p>Medicamentos</p>
+    </div>
+    <div class="category-card">
+      <img src="img/vitaminas.png" alt="Vitaminas">
+      <p>Vitaminas</p>
+    </div>
+    <div class="category-card">
+      <img src="img/cuidado.png" alt="Cuidado Personal">
+      <p>Cuidado Personal</p>
+    </div>
+    <div class="category-card">
+      <img src="img/equipos.png" alt="Equipos Médicos">
+      <p>Equipos Médicos</p>
+    </div>
+  </div>
+</section>
+
+<!-- LISTADO DE PRODUCTOS -->
+<section class="products">
+  <h2>Productos Destacados</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="img/producto1.jpg" alt="Paracetamol 500mg">
+      <h3>Paracetamol 500mg</h3>
+      <p>Analgésico y antipirético.</p>
+      <button class="btn">Comprar</button>
+    </div>
+    <div class="product-card">
+      <img src="img/producto2.jpg" alt="Vitamina C 1000mg">
+      <h3>Vitamina C 1000mg</h3>
+      <p>Refuerza el sistema inmunológico.</p>
+      <button class="btn">Comprar</button>
+    </div>
+    <div class="product-card">
+      <img src="img/producto3.jpg" alt="Alcohol en Gel 500ml">
+      <h3>Alcohol en Gel 500ml</h3>
+      <p>Protección antibacterial.</p>
+      <button class="btn">Comprar</button>
+    </div>
+    <div class="product-card">
+      <img src="img/producto4.jpg" alt="Mascarillas KN95">
+      <h3>Mascarillas KN95</h3>
+      <p>Protección de alta eficiencia.</p>
+      <button class="btn">Comprar</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================== FOOTER ================== -->
+<footer class="text-white pt-5" style="background-color:#004AAD;">
+  <div class="container">
+    <div class="row">
+      <!-- Logo -->
+      <div class="col-md-4 mb-3">
+        <img src="https://via.placeholder.com/150x50" alt="Logo" class="mb-3">
+        <p>No descuidamos la instalación y comercialización de medicamentos, material médico, equipos hospitalarios y mobiliario médico.</p>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="col-md-4 mb-3">
+        <h6 class="fw-bold">Enlaces</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Inicio</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Empresa</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Productos</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="col-md-4 mb-3">
+        <h6 class="fw-bold">Contacto</h6>
+        <p><i class="bi bi-telephone-fill"></i> +51 999 999 999</p>
+        <p><i class="bi bi-envelope-fill"></i> correo@empresa.com</p>
+        <p><i class="bi bi-geo-alt-fill"></i> Calle Tupás</p>
+      </div>
+    </div>
+
+    <hr class="border-light">
+    <div class="text-center pb-3">
+      <p class="mb-0">© Copyright 2024 IGAN PERUANA S.A. — Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
