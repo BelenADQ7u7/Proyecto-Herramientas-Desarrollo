@@ -1,18 +1,153 @@
-/* Hero con imagen de fondo */
-.hero {
+/* ==========================
+   RESET Y CONFIGURACIÓN GLOBAL
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+.navbar-brand img {
+  max-height: 60px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  background-color: #004AAD;
+  color: white;
+  font-size: 0.9rem;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* ==========================
+   INDEX (HOME)
+========================== */
+.index-page .hero {
   background: url("https://img.freepik.com/fotos-premium/medicos-hospital-sonriendo-juntos_53419-5859.jpg") no-repeat center center/cover;
   height: 100vh;
   position: relative;
 }
 
-.hero::after {
+.index-page .hero::after {
   content: "";
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
 
-.hero .container {
+.index-page .hero .container {
   position: relative;
   z-index: 1;
+}
+
+/* ==========================
+   PRODUCTOS
+========================== */
+.productos-page .banner {
+  background: url('img/banner-productos.jpg') center/cover no-repeat;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productos-page .banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.productos-page .banner p {
+  font-size: 1.2rem;
+}
+
+/* Categorías */
+.productos-page .category-card {
+  transition: transform 0.3s ease;
+}
+
+.productos-page .category-card:hover {
+  transform: translateY(-8px);
+  background-color: #f8f9fa;
+}
+
+/* Productos */
+.productos-page .product-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.productos-page .product-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* ==========================
+   EMPRESA
+========================== */
+.empresa-page header {
+  background: url('img/header-bg.jpg') center/cover no-repeat;
+}
+
+/* ==========================
+   CONTACTO
+========================== */
+.contacto-page .contact-header {
+  background: url('https://via.placeholder.com/1600x400') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.contacto-page .contact-icons .icon-box {
+  background-color: #0056d2;
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.contacto-page .contact-icons .icon-box:hover {
+  transform: scale(1.2);
+  background-color: #003f99;
+}
+
+.contacto-page .contact-form {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contacto-page .btn-submit {
+  background: #ff5722;
+  color: white;
+  font-weight: bold;
+}
+
+.contacto-page .btn-submit:hover {
+  background: #e64a19;
 }
