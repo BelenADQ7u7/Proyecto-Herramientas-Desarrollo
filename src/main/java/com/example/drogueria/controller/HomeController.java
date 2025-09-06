@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 public class HomeController {
     @GetMapping("/")
     public String home() {
-        return "index"; // index.html en templates/
+        return "index"; // index.html
     }
 
     @GetMapping("/empresa")
