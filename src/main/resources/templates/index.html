@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,22 +15,23 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
   <div class="container">
-    <a class="navbar-brand d-flex align-items-center">
-      <img src="/src/main/resources/static/img/logo.jpeg" style="height: 40px; margin-right: 10px;" href="/index">
+    <a class="navbar-brand d-flex align-items-center" th:href="@{/}">
+      <img th:src="@{/img/logo.jpeg}" alt="Logo" style="height: 60px; margin-right: 10px;">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="/index">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="/empresa">Empresa</a></li>
-        <li class="nav-item"><a class="nav-link" href="/productos">Productos</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contacto">Contáctanos</a></li>
+        <li class="nav-item"><a class="nav-link active" th:href="@{/}">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/empresa}">Empresa</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/productos}">Productos</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/contacto}">Contáctanos</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 
 
