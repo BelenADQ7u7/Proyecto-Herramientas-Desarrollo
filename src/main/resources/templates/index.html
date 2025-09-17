@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IGAN PERUANA</title>
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- CSS propio -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGAN PERUANA</title>
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body class="index-page">
@@ -31,8 +37,6 @@
     </div>
   </div>
 </nav>
-
-
 
 
 
@@ -62,13 +66,13 @@
     <div class="row g-4">
       <div class="col-md-6">
         <div class="p-4 border rounded shadow-sm bg-white">
-          <img src="/src/main/resources/static/img/bpa.png" alt="BPA" class="mb-3">
+          <img th:src="@{/img/bpa.png}" alt="BPA" class="mb-3">
           <h6>BUENAS PRÁCTICAS DE ALMACENAMIENTO</h6>
         </div>
       </div>
       <div class="col-md-6">
         <div class="p-4 border rounded shadow-sm bg-white">
-          <img src="/src/main/resources/static/img/bpdt.png" alt="BPDT" class="mb-3">
+          <img th:src="@{/img/bpdt.png}" alt="BPDT" class="mb-3">
           <h6>BUENAS PRÁCTICAS DE DISTRIBUCIÓN Y TRANSPORTE</h6>
         </div>
       </div>
@@ -85,7 +89,7 @@
         <div class="row text-center">
           <div class="col-md-3">
             <div class="card shadow-sm">
-              <img src="/src/main/resources/static/img/p-alcohol.jpeg" class="card-img-top" alt="Producto">
+              <img th:src="@{/img/p-alcohol.jpeg}" class="card-img-top" alt="Producto">
               <div class="card-body">
                 <p class="card-text">Alcohol 70° Alkofarma - Frasco 120 ML</p>
               </div>
@@ -93,7 +97,7 @@
           </div>
           <div class="col-md-3">
             <div class="card shadow-sm">
-              <img src="/src/main/resources/static/img/p-mascarillaquirurgica.jpeg" class="card-img-top" alt="Producto">
+              <img th:src="@{/img/p-mascarillaquirurgica.jpeg}" class="card-img-top" alt="Producto">
               <div class="card-body">
                 <p class="card-text">Mascarillas Quirurgicas</p>
               </div>
@@ -101,7 +105,7 @@
           </div>
           <div class="col-md-3">
             <div class="card shadow-sm">
-              <img src="/src/main/resources/static/img/p-diclofenacogel.webp" class="card-img-top" alt="Producto">
+              <img th:src="@{/img/p-diclofenacogel.webp}" class="card-img-top" alt="Producto">
               <div class="card-body">
                 <p class="card-text">Diclofenaco 1% Gel 20 G</p>
               </div>
@@ -109,7 +113,7 @@
           </div>
           <div class="col-md-3">
             <div class="card shadow-sm">
-              <img src="/src/main/resources/static/img/p-esparadrapo.png" class="card-img-top" alt="Producto">
+              <img th:src="@{/img/p-esparadrapo.png}" class="card-img-top" alt="Producto">
               <div class="card-body">
                 <p class="card-text">Esparadrapo Durapore Tela 1'' X 10 Yds 3M Unid</p>
               </div>
@@ -117,7 +121,7 @@
           </div>
         </div>
       </div>
-      <!-- Agregar más carousel-item si necesitas más páginas -->
+      <!-- Agregar más carousel-item... -->
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
@@ -138,9 +142,9 @@
     <div class="carousel-inner text-center">
       <div class="carousel-item active">
         <div class="d-flex justify-content-center gap-5">
-          <img src="/src/main/resources/static/img/m-hersil-logo.png" alt="Proveedor">
-          <img src="/src/main/resources/static/img/m-eurofarma-logo.png" alt="Proveedor">
-          <img src="https://via.placeholder.com/120x60" alt="Proveedor">
+          <img th:src="@{/img/m-hersil-logo.png}" alt="Proveedor">
+          <img th:src="@{/img/m-eurofarma-logo.png}" alt="Proveedor">
+          <img th:src="@{/img/m-bago-logo.png}" alt="Proveedor">
         </div>
       </div>
       <div class="carousel-item">
@@ -206,40 +210,45 @@
 </section>
 
 <!-- ================== FOOTER ================== -->
-<footer class="text-white pt-5" style="background-color:#004AAD;">
-  <div class="container">
-    <div class="row">
-      <!-- Logo -->
-      <div class="col-md-4 mb-3">
-        <img src="https://via.placeholder.com/150x50" alt="Logo" class="mb-3">
-        <p>No descuidamos la instalación y comercialización de medicamentos, material médico, equipos hospitalarios y mobiliario médico.</p>
-      </div>
+<footer class="footer bg-dark text-light pt-4">
+    <div class="container">
+        <div class="row">
 
-      <!-- Enlaces -->
-      <div class="col-md-4 mb-3">
-        <h6 class="fw-bold">Enlaces</h6>
-        <ul class="list-unstyled">
-          <li><a href="#" class="text-white text-decoration-none">Inicio</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Empresa</a></li>
-          <li><a href="#" class="text-white text-decoration-none">Productos</a></li>
-        </ul>
-      </div>
+            <!-- Columna 1: Logo + descripción -->
+            <div class="col-md-4 mb-4 text-md-start text-center">
+                <img th:src="@{/img/logofooter.jpeg}" alt="Logo de la empresa" class="footer-logo">
+                <p class="mb-3">Nos dedicamos a ofrecer la mejor experiencia en ventas online.</p>
+            </div>
 
-      <!-- Contacto -->
-      <div class="col-md-4 mb-3">
-        <h6 class="fw-bold">Contacto</h6>
-        <p><i class="bi bi-telephone-fill"></i> +51 999 999 999</p>
-        <p><i class="bi bi-envelope-fill"></i> correo@empresa.com</p>
-        <p><i class="bi bi-geo-alt-fill"></i> Calle Tupás</p>
-      </div>
+            <!-- Columna 2: Navegación -->
+            <div class="col-md-4 mb-4 text-center">
+                <h5 class="mb-3">Navegación</h5>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/}" class="text-light">Inicio</a></li>
+                    <li><a th:href="@{/productos}" class="text-light">Productos</a></li>
+                    <li><a th:href="@{/contacto}" class="text-light">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Redes sociales -->
+            <div class="col-md-4 mb-4 text-md-end text-center">
+                <h5 class="mb-3">Síguenos</h5>
+                <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+            </div>
+
+        </div>
+        <hr class="border-light">
+        <div class="text-center pb-3">
+            <p class="mb-0">&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>
+        </div>
     </div>
-
-    <hr class="border-light">
-    <div class="text-center pb-3">
-      <p class="mb-0">© Copyright 2024 IGAN PERUANA S.A. — Todos los derechos reservados.</p>
-    </div>
-  </div>
 </footer>
+
+
+
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
