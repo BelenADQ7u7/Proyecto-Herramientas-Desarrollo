@@ -20,7 +20,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" th:href="@{/index}">
+        <a class="navbar-brand d-flex align-items-center" th:href="@{/}">
             <img th:src="@{/img/logo.jpeg}" alt="Logo" style="height: 60px; margin-right: 10px;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@
         </button>
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" th:href="@{/index}">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link active" th:href="@{/}">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/empresa}">Empresa</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/productos}">Productos</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/contacto}">Contáctanos</a></li>
@@ -37,23 +37,22 @@
     </div>
 </nav>
 
-<!-- 🔹 HEADER -->
-<header class="bg-primary text-white text-center py-5">
+<!-- HEADER -->
+<section class="empresa-hero d-flex align-items-center text-white text-center">
     <div class="container">
-        <h1 class="display-4 fw-bold">IGAN PERUANA S.A.</h1>
-        <p class="lead">Innovación en soluciones médicas y hospitalarias</p>
+        <h1 class="display-4 fw-bold mb-3">IGAN PERUANA S.A.</h1>
+        <p class="lead mb-4">Innovación en soluciones médicas y hospitalarias</p>
+        <a href="#about" class="btn btn-warning btn-lg fw-bold">Nosotros</a>
     </div>
-</header>
-
-<!-- 🔹 NOSOTROS -->
-<section class="py-5">
+</section>
+<!-- NOSOTROS -->
+<section id="about" class="py-5">
     <div class="container text-center">
         <h2 class="mb-4">NOSOTROS</h2>
         <p class="text-muted">Somos una empresa dedicada a la distribución de productos médicos y hospitalarios, comprometida con la salud y bienestar de nuestros clientes.</p>
     </div>
 </section>
-
-<!-- 🔹 MISIÓN Y VISIÓN -->
+<!-- MISIÓN Y VISIÓN -->
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row text-center">
@@ -69,33 +68,74 @@
     </div>
 </section>
 
-<!-- 🔹 VALORES -->
-<section class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">NUESTROS VALORES</h2>
-        <ul class="list-group list-group-flush w-50 mx-auto">
-            <li class="list-group-item">✔ Responsabilidad</li>
-            <li class="list-group-item">✔ Respeto</li>
-            <li class="list-group-item">✔ Honestidad</li>
-            <li class="list-group-item">✔ Calidad</li>
-            <li class="list-group-item">✔ Innovación</li>
-            <li class="list-group-item">✔ Enfoque al cliente</li>
-        </ul>
+<!-- VALORES -->
+<section class="valores-section py-5">
+    <div class="container-fluid">
+        <h2 class="text-center display-5 fw-bold text-white mb-5">NUESTROS VALORES</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card bg-primary text-white p-4 shadow">
+                    <ul class="list-unstyled mb-0">
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill me-3 fs-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-0">Responsabilidad</h5>
+                                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill me-3 fs-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-0">Respeto</h5>
+                                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill me-3 fs-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-0">Honestidad</h5>
+                                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill me-3 fs-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-0">Confianza</h5>
+                                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <i class="bi bi-check-circle-fill me-3 fs-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-0">Trabajo en equipo</h5>
+                                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill me-3 fs-3"></i>
+                            <div>
+                                <h5 class="fw-bold mb-0">Enfoque en el cliente</h5>
+                                <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- 🔹 CERTIFICACIONES -->
+<!-- CERTIFICACIONES -->
 <section class="py-5 bg-light">
     <div class="container text-center">
         <h2 class="mb-4">CERTIFICACIONES</h2>
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <img src="img/cert1.png" alt="Certificación 1" class="img-fluid mb-2" width="150">
-                <p class="fw-bold">Norma ISO 9001 de Gestión de Calidad</p>
+                <img th:src="@{/img/bpa.png}" alt="Certificación 1" class="img-fluid mb-2" width="150">
+                <p class="fw-bold">BUENAS PRÁCTICAS DE ALMACENAMIENTO</p>
             </div>
             <div class="col-md-4">
-                <img src="img/cert2.png" alt="Certificación 2" class="img-fluid mb-2" width="150">
-                <p class="fw-bold">Norma ISO 14001 de Medio Ambiente</p>
+                <img th:src="@{/img/bpdt.png}" alt="Certificación 2" class="img-fluid mb-2" width="150">
+                <p class="fw-bold">BUENAS PRÁCTICAS DE DISTRIBUCIÓN Y TRANSPORTE</p>
             </div>
         </div>
     </div>
@@ -114,8 +154,8 @@
 <section class="py-5 bg-light">
     <div class="container text-center">
         <h2 class="mb-4">NUESTROS CLIENTES</h2>
-        <img src="img/cliente1.png" alt="Cliente 1" class="img-fluid mx-3" width="120">
-        <img src="img/cliente2.png" alt="Cliente 2" class="img-fluid mx-3" width="120">
+        <img th:src="@{/img/logoMINSA.png}" alt="Cliente 1" class="img-fluid mx-3" width="120">
+        <img th:src="@{/img/Logo_EsSalud.png}" alt="Cliente 2" class="img-fluid mx-3" width="120">
     </div>
 </section>
 
