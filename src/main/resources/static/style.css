@@ -1,5 +1,4 @@
 
-/* Si usas @import en tu CSS */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap');
 
 /* ==========================
@@ -25,7 +24,6 @@ body img {
   padding: 1rem 0;
 }
 
-/* Logo */
 
 /* Navbar más alto y centrado */
 .navbar {
@@ -55,39 +53,62 @@ body img {
 /* ==========================
    FOOTER
 ========================== */
-/* Footer general */
 .footer {
-  background-color: #222;
+  background-color: #1A5BD2;
   color: #ddd;
   font-size: 0.95rem;
+}
+
+.footer .container > .row {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Línea de separación */
 }
 
 .footer a {
   color: #ddd;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer a:hover {
   color: #fff;
-  text-decoration: underline;
+}
+
+.footer h5 {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Estilos de las listas de navegación */
+.footer ul {
+  padding-left: 0;
+}
+
+.footer li {
+  margin-bottom: 0.5rem;
 }
 
 /* Logo del footer */
 .footer .footer-logo {
-  width: 160px;          /* tamaño fijo recomendado */
-  max-width: 100%;       /* nunca más grande que el contenedor */
+  width: 160px;
+  max-width: 100%;
   height: auto;
-  display: block;
   object-fit: contain;
-  margin: 0 auto 15px;   /* centrado por defecto */
 }
 
-/* Desktop: columnas alineadas */
-@media (min-width: 768px) {
-  .footer .footer-logo {
-    margin: 0 0 15px;   /* alineado a la izquierda cuando hay espacio */
-  }
+/* Estilos para el texto de contacto */
+.footer .bi {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
 }
+
+/* Sección inferior del footer */
+.footer-bottom {
+  background-color: #0d1a37; /* Fondo azul oscuro */
+  color: #a0a0a0;
+  font-size: 0.85rem;
+}
+
 
 /* ==========================
    INDEX (HOME)
@@ -108,6 +129,55 @@ body img {
 .index-page .hero .container {
   position: relative;
   z-index: 1;
+}
+/* ==========================
+   CAROUSEL DE LOGOS INDEX
+========================== */
+.logo-carousel-img {
+  max-width: 150px; /* Limita el ancho máximo */
+  max-height: 80px; /* Limita el alto máximo */
+  height: auto;
+  object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+  padding: 10px; /* Un poco de espacio alrededor del logo */
+  filter: grayscale(100%); /* Efecto para que los logos se vean más uniformes */
+  transition: filter 0.3s ease-in-out; /* Transición para un efecto suave */
+}
+
+/* Efecto al pasar el mouse */
+.logo-carousel-img:hover {
+  filter: grayscale(0%); /* Quita el filtro de color al pasar el mouse */
+}
+/* ==========================
+   SECCIÓN CHAT ONLINE
+========================== */
+.chat-online-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/fondo-chatbot.jpg") no-repeat center center/cover;
+    height: 60vh; /* Puedes ajustar la altura según lo necesites */
+    position: relative; /* Necesario para que el contenido se posicione correctamente */
+}
+
+/* Estilo para el botón de WhatsApp */
+.chat-online-section .btn {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* Efecto hover */
+.chat-online-section .btn:hover {
+    background-color: #555;
+    border-color: #555;
+}
+
+.chat-online-section .btn .bi-whatsapp {
+    font-size: 1.5rem; /* Aumenta el tamaño del icono de WhatsApp */
+    margin-right: 0.5rem;
+}
+
+/* Estilo para el ícono grande (opcional) */
+.chat-online-section .bi-whatsapp.bi-lg {
+    font-size: 4rem;
+    display: block;
+    margin: 0 auto 1rem;
 }
 
 /* ==========================
@@ -161,13 +231,22 @@ body img {
 /* ==========================
    CONTACTO
 ========================== */
-.contacto-page .contact-header {
-  background: url('https://via.placeholder.com/1600x400') center/cover no-repeat;
+.contact-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/fondcontac.webp") no-repeat center center/cover;
+  height: 65vh; /* Aumenta la altura del hero */
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   text-align: center;
-  padding: 100px 0;
-  font-size: 2.5rem;
+}
+
+.contact-header h1 {
+  font-size: 5rem; /* Aumenta el tamaño del título */
   font-weight: bold;
+  letter-spacing: 2px; /* Espaciado entre letras para un mejor efecto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
 }
 
 .contacto-page .contact-icons .icon-box {
