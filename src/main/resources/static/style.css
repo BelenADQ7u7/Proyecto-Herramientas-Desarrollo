@@ -183,23 +183,31 @@ body img {
 /* ==========================
    PRODUCTOS
 ========================== */
+/* ==========================
+   BANNER DE PRODUCTOS
+========================== */
 .productos-page .banner {
-  background: url('img/banner-productos.jpg') center/cover no-repeat;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background: linear-gradient(to top, rgba(26, 91, 210, 0.4), rgba(26, 91, 210, 0.4)), url("/img/fondoProductos.jpeg") no-repeat center center/cover;
+    height: 60vh; /* Aumenta la altura del hero */
+    color: white;
+    display: flex; /* Para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    position: relative;
+    text-align: center;
 }
 
 .productos-page .banner h1 {
-  font-size: 3rem;
+  font-size: 4rem; /* Aumenta el tamaño del título */
   font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .productos-page .banner p {
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Aumenta el tamaño del subtítulo */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-
 /* Categorías */
 .productos-page .category-card {
   transition: transform 0.3s ease;
