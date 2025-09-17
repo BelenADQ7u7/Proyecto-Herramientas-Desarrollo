@@ -1,3 +1,7 @@
+
+/* Si usas @import en tu CSS */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap');
+
 /* ==========================
    RESET Y CONFIGURACIÓN GLOBAL
 ========================== */
@@ -6,14 +10,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   color: #333;
   background: #fff;
 }
-
-img {
+body img {
   max-width: 100%;
   height: auto;
 }
@@ -53,19 +55,45 @@ img {
 /* ==========================
    FOOTER
 ========================== */
-footer {
-  background-color: #004AAD;
-  color: white;
-  font-size: 0.9rem;
-  padding: 40px 0;
-  text-align: center;
+/* Footer general */
+.footer {
+  background-color: #222;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Logo del footer */
+.footer .footer-logo {
+  width: 160px;          /* tamaño fijo recomendado */
+  max-width: 100%;       /* nunca más grande que el contenedor */
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin: 0 auto 15px;   /* centrado por defecto */
+}
+
+/* Desktop: columnas alineadas */
+@media (min-width: 768px) {
+  .footer .footer-logo {
+    margin: 0 0 15px;   /* alineado a la izquierda cuando hay espacio */
+  }
 }
 
 /* ==========================
    INDEX (HOME)
 ========================== */
 .index-page .hero {
-  background: url("https://img.freepik.com/fotos-premium/medicos-hospital-sonriendo-juntos_53419-5859.jpg") no-repeat center center/cover;
+  background:  url("/img/fonde.webp") no-repeat center center/cover;
   height: 100vh;
   position: relative;
 }
