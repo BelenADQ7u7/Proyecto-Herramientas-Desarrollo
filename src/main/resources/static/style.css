@@ -266,6 +266,21 @@ body img {
     position: relative;
     z-index: 1;
 }
+/* ==========================
+   SECCIÓN DE CLIENTES
+========================== */
+.client-logo {
+  max-width: 180px;      /* Tamaño máximo un poco más grande */
+  max-height: 100px;     /* Altura máxima para evitar logos muy altos */
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%); /* Efecto de blanco y negro para uniformidad */
+  transition: filter 0.3s ease-in-out;
+}
+
+.client-logo:hover {
+  filter: grayscale(0%); /* Quita el filtro de color al pasar el mouse */
+}
 
 /* ==========================
    CONTACTO
