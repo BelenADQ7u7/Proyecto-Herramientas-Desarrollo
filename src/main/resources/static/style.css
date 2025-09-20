@@ -134,18 +134,41 @@ body img {
    CAROUSEL DE LOGOS INDEX
 ========================== */
 .logo-carousel-img {
-  max-width: 150px; /* Limita el ancho máximo */
-  max-height: 80px; /* Limita el alto máximo */
+  max-width: 180px; /* Aumenta el ancho máximo */
+  max-height: 100px; /* Aumenta el alto máximo */
   height: auto;
-  object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
-  padding: 10px; /* Un poco de espacio alrededor del logo */
-  filter: grayscale(100%); /* Efecto para que los logos se vean más uniformes */
-  transition: filter 0.3s ease-in-out; /* Transición para un efecto suave */
+  object-fit: contain;
+  padding: 10px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
 }
 
 /* Efecto al pasar el mouse */
 .logo-carousel-img:hover {
-  filter: grayscale(0%); /* Quita el filtro de color al pasar el mouse */
+  filter: grayscale(0%);
+}
+
+/* Estilo para los títulos de las secciones */
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem; /* Tamaño del título */
+  color: #1A5BD2; /* Color corporativo azul */
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #E94E1B; /* Línea decorativa naranja */
+  border-radius: 2px;
 }
 /* ==========================
    SECCIÓN CHAT ONLINE
@@ -281,7 +304,20 @@ body img {
 .client-logo:hover {
   filter: grayscale(0%); /* Quita el filtro de color al pasar el mouse */
 }
+/* ==========================
+   SECCIÓN DE PROVEEDORES
+========================== */
+.proveedor-logo {
+    max-width: 140px;      /* Ancho máximo para el logo */
+    max-height: 80px;      /* Altura máxima para el logo */
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out; /* Transición para el efecto de escala */
+}
 
+.proveedor-logo:hover {
+    transform: scale(1.1); /* Agranda el logo al pasar el mouse */
+}
 /* ==========================
    CONTACTO
 ========================== */
