@@ -19,33 +19,30 @@ body img {
   height: auto;
 }
 
-/* NAVBAR GENERAL */
+/* ==========================
+   NAVBAR GENERAL MEJORADO
+========================== */
+
+/* Estilo general y z-index alto para asegurar que esté sobre otros elementos */
 .navbar {
-  padding: 1rem 0;
+  padding: 0.75rem 1rem; /* Ajuste de padding para altura agradable */
+  z-index: 1030; /* Asegura que el navbar siempre esté arriba */
 }
 
-
-/* Navbar más alto y centrado */
-.navbar {
-  padding: 0.5rem 1rem;
-}
-
-/* Centrado vertical de elementos */
-.navbar-brand img {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* Estilo de los links */
+/* Estilo de los links: Azul Corporativo por defecto */
 .navbar .nav-link {
   color: #1A5BD2 !important; /* Azul corporativo */
   font-weight: bold;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
+  /* Transición suave para el efecto hover/active */
+  transition: color 0.3s ease-in-out;
 }
 
+/* Estado al pasar el mouse (Hover) y Estado Activo: Naranja */
+.navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #E94E1B !important; /* Naranja para activo */
+  color: #E94E1B !important; /* Naranja de marca */
 }
 
 
