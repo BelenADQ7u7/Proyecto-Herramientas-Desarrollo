@@ -45,6 +45,23 @@ body img {
   color: #E94E1B !important; /* Naranja de marca */
 }
 
+/* Estilo de los íconos (Búsqueda, Carrito, Usuario) */
+.text-igan-blue-icon {
+    color: #1A5BD2 !important;
+    /* Sobreescribe el color del .nav-link:hover para los íconos, manteniéndolos azules */
+}
+
+/* Hover/Active para los íconos */
+.text-igan-blue-icon:hover,
+.text-igan-blue-icon:focus {
+    color: #FF601A !important; /* Cambia a Naranja al pasar el mouse */
+}
+
+/* Estilo para el Badge (el contador del carrito) */
+.bg-igan-orange-badge {
+    background-color: #FF601A !important; /* Naranja corporativo */
+    border: 1px solid #fff; /* Pequeño borde blanco para separarlo */
+}
 
 
 /* ==========================
