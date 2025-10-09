@@ -410,3 +410,85 @@ body img {
   background: #cc4518; /* Naranja ligeramente más oscuro en hover */
   border-color: #cc4518;
 }
+
+/* ======================================================= */
+/* ESTILOS ESPECÍFICOS DEL ADMINISTRADOR (CRUD) */
+/* ======================================================= */
+
+/* Definición de Colores Corporativos IGAN PERUANA SA */
+:root {
+    /* Azul: Usamos el color de tu nav, que es #1A5BD2 */
+    --igan-blue: #1A5BD2;
+    /* Naranja: Usamos #FF601A (Manual de Marca) o #E94E1B (Tu CSS existente) */
+    --igan-orange: #FF601A;
+}
+
+/* Clases de texto y fondo para usar en cualquier componente */
+.text-igan-blue {
+    color: var(--igan-blue) !important;
+}
+
+.bg-igan-blue {
+    background-color: var(--igan-blue) !important;
+}
+
+.bg-igan-orange {
+    background-color: var(--igan-orange) !important;
+}
+
+/* --- Botones --- */
+
+/* Botón principal de guardar/añadir (Azul Corporativo) */
+.btn-igan-blue {
+    background-color: var(--igan-blue);
+    color: white;
+    border-color: var(--igan-blue);
+    transition: all 0.2s;
+}
+
+.btn-igan-blue:hover {
+    background-color: #1449a8; /* Un tono más oscuro en hover */
+    border-color: #1449a8;
+    color: white;
+}
+
+/* Botón de Añadir Producto (Naranja Corporativo) */
+.btn-igan-orange {
+    background-color: var(--igan-orange);
+    color: white;
+    border-color: var(--igan-orange);
+    transition: all 0.2s;
+}
+
+.btn-igan-orange:hover {
+    background-color: #d14f0e; /* Un tono más oscuro de naranja en hover */
+    border-color: #d14f0e;
+    color: white;
+}
+
+/* Botón de contorno (Outline) Azul para Editar/Acciones */
+.btn-outline-igan-blue {
+    color: var(--igan-blue);
+    border-color: var(--igan-blue);
+}
+
+.btn-outline-igan-blue:hover {
+    background-color: var(--igan-blue);
+    color: white;
+}
+
+/* Estilo para los Badges (contadores) en naranja */
+.bg-igan-orange-badge {
+    background-color: var(--igan-orange) !important;
+    border: 1px solid #fff; /* Borde blanco para mayor visibilidad */
+}
+
+/* Estilos de tabla del Administrador */
+.table th {
+    font-weight: 600;
+    color: #495057;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f7f7f7; /* Un gris muy claro para el stripe */
+}
