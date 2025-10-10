@@ -2,10 +2,10 @@
 
 
 -- Resumen: 
-Se implementó entidades y controladores para el apartado de administrador, con el fin de que realice diferentes operaciones CRUD.
+Se implementó entidades, controladores y por el momento una vista html para el apartado de administrador, con el fin de que realice diferentes operaciones CRUD.
 
--- Mejorar la apariencia visual de la página para que esté alineada a su manual de marca. 
+-- Mejorar la apariencia visual de la página para que esté alineada a su manual de marca (colores, componentes, mejorar el nav). 
 
 
 --
-Investigar Portabilidad 
+Investigar Portabilidad para despliegue de la app web.
