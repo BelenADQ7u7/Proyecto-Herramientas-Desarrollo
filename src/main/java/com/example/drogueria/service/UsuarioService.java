@@ -15,7 +15,8 @@ public class UsuarioService {
 
     // Lógica para encontrar un usuario por email (usado en el login)
     public Optional<Usuario> buscarPorEmail(String email) {
-        return Optional.ofNullable(usuarioRepository.findByEmail(email));
+        // CORRECCIÓN: Si el repositorio devuelve Optional, solo haz 'return' directo.
+        return usuarioRepository.findByEmail(email);
     }
 
     // Aquí iría la lógica de verificación de contraseña y autenticación (usando Spring Security).
