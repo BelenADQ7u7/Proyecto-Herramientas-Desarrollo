@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al Sistema - IGAN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fondo gris claro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .text-igan-orange { color: #ff601a !important; }
+        .text-igan-blue { color: #1a5bd2 !important; }
+        .btn-igan-blue {
+            background-color: #1a5bd2;
+            border-color: #1a5bd2;
+            color: white;
+            transition: background-color 0.2s;
+        }
+        .btn-igan-blue:hover {
+            background-color: #1449a5; /* Tono más oscuro al pasar el ratón */
+            border-color: #1449a5;
+            color: white;
+        }
+        .nav-link.active {
+            border-bottom: 3px solid #ff601a !important; /* Resaltar pestaña activa con naranja IGAN */
+            color: #1a5bd2 !important;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: #6c757d !important;
+        }
+        .login-container {
+            max-width: 420px;
+            width: 90%;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card shadow-lg border-0 login-container">
+
+    <div class="card-header bg-white text-center border-0 pt-4 pb-0">
+        <h3 class="text-igan-blue fw-bolder mb-0">IGAN PERUANA SA</h3>
+        <p class="text-muted small">Acceso al Sistema Administrativo</p>
+    </div>
+
+    <div class="card-body">
+
+        <ul class="nav nav-tabs justify-content-center mb-4" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> Iniciar Sesión
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro" type="button" role="tab" aria-controls="registro" aria-selected="false">
+                    <i class="bi bi-person-plus-fill me-1"></i> Registrarse
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+
+            <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+
+                <div th:if="${param.error}" class="alert alert-danger p-2 small text-center">
+                    Email o contraseña incorrectos.
+                </div>
+
+                <form th:action="@{/login}" method="post">
+
+                    <div class="mb-3">
+                        <label for="username" class="form-label small fw-bold text-igan-blue">Correo Electrónico (Email)</label>
+                        <input type="email" id="username" name="username" class="form-control" required placeholder="tu.correo@igan.com">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="password" class="form-label small fw-bold text-igan-blue">Contraseña</label>
+                        <input type="password" id="password" name="password" class="form-control" required placeholder="****">
+                    </div>
+
+                    > Belén Diaz :p:
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-igan-blue fw-bold py-2 shadow-sm">
+                            <i class="bi bi-lock-fill me-1"></i> ACCEDER
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="tab-pane fade" id="registro" role="tabpanel" aria-labelledby="registro-tab">
+
+                <div th:if="${registroExito}" class="alert alert-success p-2 small text-center">
+                    Registro exitoso. ¡Inicia sesión!
+                </div>
+
+                <form th:action="@{/registro}" th:object="${usuario}" method="post">
+
+                    <div class="mb-3">
+                        <label for="nombreRegistro" class="form-label small fw-bold text-igan-blue">Nombre Completo</label>
+                        <input type="text" id="nombreRegistro" th:field="*{nombre}" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="emailRegistro" class="form-label small fw-bold text-igan-blue">Correo Electrónico</label>
+                        <input type="email" id="emailRegistro" th:field="*{email}" class="form-control" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="passwordRegistro" class="form-label small fw-bold text-igan-blue">Contraseña</label>
+                        <input type="password" id="passwordRegistro" th:field="*{password}" class="form-control" required>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-outline-secondary fw-bold py-2">
+                            <i class="bi bi-person-check-fill me-1 text-igan-orange"></i> CREAR CUENTA
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
