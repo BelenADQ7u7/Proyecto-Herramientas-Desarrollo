@@ -71,3 +71,19 @@ Trello es extremadamente simple y flexible, adaptándose bien a los cambios que 
 Cambios Rápidos: Si el cliente decide cambiar la prioridad o si surge un error crítico, es muy fácil mover la tarjeta a la columna de máxima prioridad o crear una nueva tarjeta de "Bug Fix" en el Backlog.
 
 Integración con GitHub: Existen integraciones que te permiten vincular tarjetas de Trello con commits o ramas específicas en GitHub, mejorando la trazabilidad del código. Por ejemplo, una vez que terminas el código en tu rama diaz, puedes marcar la tarjeta como "Testing".
+
+
+Usar **Docker** en tu proyecto Spring Boot significa que puedes **empaquetar** tu aplicación y sus dependencias (como Java 8) para que **funcione exactamente igual** en cualquier lugar.
+
+---
+
+## 🚀 Beneficios Resumidos de Docker
+
+| Beneficio Clave | ¿Qué Resuelve? | Cómo se Aplica al Proyecto |
+| :--- | :--- | :--- |
+| **1. Consistencia Ambiental** | El problema de "funciona en mi máquina, pero no en la tuya". | **Garantiza** que siempre se use la versión correcta de Java y las bibliotecas, eliminando errores de incompatibilidad de versiones. |
+| **2. Aislamiento** | Mezcla de configuraciones y bases de datos locales. | Puedes ejecutar una base de datos **PostgreSQL en un contenedor separado** que solo tu app usa, sin afectar tu sistema operativo. |
+| **3. Despliegue Simplificado** | Subir y configurar la aplicación en un servidor. | Creas una **única imagen portable** que puede ser ejecutada con un solo comando en cualquier servidor (producción o desarrollo), haciendo el despliegue más rápido y fiable. |
+| **4. Portabilidad** | Dificultad para migrar de un servidor a otro. | Tu aplicación se vuelve **fácil de mover** (de tu PC a Vercel/Render, o a cualquier otro proveedor de nube) porque lleva su entorno consigo. |
+
+En resumen, Docker te proporciona una **caja estandarizada** y autosuficiente para tu aplicación, haciendo el desarrollo más **predecible** y el despliegue más **sencillo**.
