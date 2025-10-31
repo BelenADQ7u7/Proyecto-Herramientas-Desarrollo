@@ -87,3 +87,47 @@ Usar **Docker** en tu proyecto Spring Boot significa que puedes **empaquetar** t
 | **4. Portabilidad** | Dificultad para migrar de un servidor a otro. | Tu aplicación se vuelve **fácil de mover** (de tu PC a Vercel/Render, o a cualquier otro proveedor de nube) porque lleva su entorno consigo. |
 
 En resumen, Docker te proporciona una **caja estandarizada** y autosuficiente para tu aplicación, haciendo el desarrollo más **predecible** y el despliegue más **sencillo**.
+
+### 1. 🌟 Proyecto
+
+* **Nombre:** Droguería IGAN PERUANA SA
+* **Descripción:** Plataforma de gestión de inventario y catálogo de productos farmacéuticos y material médico. Implementado bajo arquitectura MVC.
+* **Estado:** En Desarrollo Activo (o el que corresponda).
+* **Link de Despliegue (Opcional):** `https://www.youtube.com/watch?v=sxcKVwURuhk`
+
+---
+
+### 2. ⚙️ Stack Tecnológico
+
+Sé muy específico con las versiones para evitar conflictos.
+
+* **Backend:** **Java 8 (JDK 1.8)**, **Spring Boot 2.7.18**.
+* **Persistencia:** Spring Data JPA, Hibernate.
+* **Base de Datos:** **PostgreSQL** (Aiven Cloud/Docker).
+* **Vistas:** **Thymeleaf**, **Bootstrap 5**, Bootstrap Icons.
+* **Build Tool:** Maven.
+
+---
+
+### 3. 🛠️ Configuración y Ejecución
+
+Esta sección es crucial para cualquier colaborador.
+
+#### Prerrequisitos
+* **Java 8 (JDK 1.8)**
+* **Maven**
+* **Docker** (Recomendado para desarrollo local de la DB)
+
+#### Pasos para Iniciar
+1.  **Clonar:** `git clone https://aws.amazon.com/es/what-is/repo/`
+2.  **Credenciales:** Configura la URL, usuario y contraseña de la base de datos PostgreSQL en `src/main/resources/application.properties` (usando variables de entorno `${...}` si es posible).
+3.  **Compilar:** `mvn clean install`
+4.  **Ejecutar:** `java -jar target/drogueria-0.0.1-SNAPSHOT.jar`
+5.  **Acceso:** El panel de administración estará disponible en `http://localhost:8080/admin`.
+
+---
+
+### 4. 🤝 Contribuciones y Contacto
+
+* **Reglas de Contribución:** Usa la metodología Gitflow: Trabaja en una rama separada (`feature/nombre-tarea`) y haz un **Pull Request** para fusionar con `main`.
+* **Contacto:** `[Tu correo electrónico]` o `[Tu perfil de LinkedIn/GitHub]`.
