@@ -131,3 +131,103 @@ Esta sección es crucial para cualquier colaborador.
 
 * **Reglas de Contribución:** Usa la metodología Gitflow: Trabaja en una rama separada (`feature/nombre-tarea`) y haz un **Pull Request** para fusionar con `main`.
 * **Contacto:** `[Tu correo electrónico]` o `[Tu perfil de LinkedIn/GitHub]`.
+* 
+
+
+Has abordado con éxito problemas de código (el `Optional` duplicado), configuración (`pom.xml`, *drivers* de PostgreSQL), y despliegue/Git (el bloqueo por el *Secret Scanning* de GitHub y la eliminación de Vercel). También has mejorado tus vistas de administrador.
+
+Para finalizar la revisión y asegurar que el proyecto está listo para avanzar, aquí te presento **un punto de corrección crucial** y **dos puntos de mejora** en las mejores prácticas.
+
+-----
+
+## 1\. ⚠️ Corrección Crítica: Seguridad de Contraseñas (El Servicio)
+
+El mayor riesgo actual en tu código es cómo manejas la verificación de contraseñas. Tu `UsuarioService` (código que enviaste al inicio) sigue comparando contraseñas en texto plano:
+
+```java
+// Código Actual (INCORRECTO en producción)
+public boolean verificarCredenciales(String email, String password) {
+    Optional<Usuario> usuario = buscarPorEmail(email);
+
+    if (usuario.isPresent()) {
+        // ¡RIESGO DE SEGURIDAD! Comparación en texto plano.
+        return usuario.get().getPassword().equals(password); 
+    }
+    return false;
+}
+```
+
+### ✅ Solución: Usar BCryptPasswordEncoder
+
+Debes reemplazar la comparación en texto plano con el estándar de Spring Security: **`BCryptPasswordEncoder`**.
+
+#### Pasos de Corrección:
+
+1.  **Asegúrate de tener Spring Security** como dependencia en tu `pom.xml`.
+2.  **Modifica el Servicio:**
+
+<!-- end list -->
+
+```java
+package com.example.drogueria.service;
+
+import com.example.drogueria.entity.Usuario;
+import com.example.drogueria.repository.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder; // Necesitas esta clase
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
+@Service
+public class UsuarioService {
+
+    @Autowired
+    private UsuarioRepository usuarioRepository;
+
+    // INYECTA BCryptPasswordEncoder aquí
+    @Autowired
+    private PasswordEncoder passwordEncoder; 
+
+    public Optional<Usuario> buscarPorEmail(String email) {
+        return usuarioRepository.findByEmail(email); 
+    }
+
+    // Lógica de autenticación mejorada
+    public boolean verificarCredenciales(String email, String password) {
+        Optional<Usuario> usuario = buscarPorEmail(email);
+
+        if (usuario.isPresent()) {
+            // ✅ CORRECCIÓN: Compara el password de texto plano con el hash guardado.
+            return passwordEncoder.matches(password, usuario.get().getPassword());
+        }
+        return false;
+    }
+}
+```
+
+  * *Nota:* Necesitarás configurar el `PasswordEncoder` como un Bean en tu clase de configuración de Spring Security (ej: `SecurityConfig.java`).
+
+-----
+
+## 2\. 💡 Mejoras en Mejores Prácticas
+
+### A. Estandarizar la Nomenclatura del Repositorio
+
+Tu método `findByEmail` es correcto, pero por convención de Spring Data JPA, si el email es único (que debería serlo para un login), el método de búsqueda que se espera en el controlador es a veces solo devolver la entidad o lanzar una excepción si no existe.
+
+  * **Alternativa a `findByEmail`:** Si tu email es único, considera usar **`Optional<Usuario> findByEmail(String email);`** (que ya tienes) o **`Usuario getReferenceByEmail(String email);`** si sabes que la entidad existe.
+
+### B. Uso de DTOs (Data Transfer Objects)
+
+A medida que tu proyecto crezca, enviar la entidad `Usuario` (que incluye la contraseña, incluso hasheada) directamente a las vistas o recibir datos de un formulario directamente en la entidad puede ser riesgoso.
+
+  * **Recomendación:** Crea clases **DTO** (ej: `UsuarioRegistroDTO`, `ProductoFormDTO`) para:
+    1.  **Registro:** Solo recibir los campos necesarios (nombre, email, *password*, sin ID ni *roles*).
+    2.  **Vistas:** Solo enviar los datos que la vista necesita mostrar, ocultando campos sensibles.
+
+Esto mejora la seguridad, el control y desacopla la capa de presentación de la capa de persistencia.
+
+-----
+
+Una vez que implementes el **BCryptPasswordEncoder**, la seguridad básica de tu proyecto estará robusta. ¿Necesitas ayuda con la configuración del **BCryptPasswordEncoder** en Spring Security?
