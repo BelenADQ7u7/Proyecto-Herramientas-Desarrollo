@@ -230,4 +230,34 @@ Esto mejora la seguridad, el control y desacopla la capa de presentación de la 
 
 -----
 
-Una vez que implementes el **BCryptPasswordEncoder**, la seguridad básica de tu proyecto estará robusta. ¿Necesitas ayuda con la configuración del **BCryptPasswordEncoder** en Spring Security?
+---
+
+## 📋 Gestión del Proyecto
+
+Para mantener un flujo de trabajo ágil y colaborativo, utilizamos las siguientes herramientas y convenciones:
+
+### 1. 🗃️ Trello (Flujo de Trabajo)
+
+Trello se usa para visualizar el progreso del desarrollo bajo la metodología **Kanban**.
+
+* **Tablero:** `https://trello.com/es/guide/trello-101`
+* **Columnas Clave:**
+    * **Backlog:** Funcionalidades pendientes.
+    * **To Do:** Tareas listas para empezar.
+    * **In Progress:** Tareas asignadas que se están codificando.
+    * **Review / Testing:** Tareas completas esperando validación (QA).
+    * **Done:** Tareas fusionadas a la rama `main`.
+* **Regla:** Antes de empezar a codificar, mueve la tarjeta correspondiente de **'To Do'** a **'In Progress'** y asígnatela.
+
+### 2. 🌳 Convenciones de Git
+
+Utilizamos un flujo de trabajo basado en ramas para asegurar la estabilidad de la rama principal.
+
+* **Rama Principal:** **`main`** (Siempre estable y lista para producción).
+* **Ramas de Feature:** Todo desarrollo nuevo debe hacerse en una rama separada (ej: `git checkout -b feature/login-seguro`).
+* **Commits:** Los mensajes de commit deben ser descriptivos y seguir un formato claro (ej: `feat: Añadir formulario de registro de usuarios`, `fix: Corregir error de stock bajo en tabla admin`).
+* **Merge:** **Nunca hagas un *push* directo a `main`**. Todos los cambios deben ser propuestos a través de un **Pull Request (PR)** desde tu rama de *feature*.
+
+---
+
+Esto proporciona a cualquier desarrollador un manual de operaciones claro sobre cómo debe interactuar con el proyecto y el equipo.
