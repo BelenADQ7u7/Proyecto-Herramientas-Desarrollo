@@ -88,35 +88,7 @@ Usar **Docker** en tu proyecto Spring Boot significa que puedes **empaquetar** t
 
 En resumen, Docker te proporciona una **caja estandarizada** y autosuficiente para tu aplicación, haciendo el desarrollo más **predecible** y el despliegue más **sencillo**.
 
-### 1. 🌟 Proyecto
 
-* **Nombre:** Droguería IGAN PERUANA SA
-* **Descripción:** Plataforma de gestión de inventario y catálogo de productos farmacéuticos y material médico. Implementado bajo arquitectura MVC.
-* **Estado:** En Desarrollo Activo (o el que corresponda).
-* **Link de Despliegue (Opcional):** `https://www.youtube.com/watch?v=sxcKVwURuhk`
-
----
-
-### 2. ⚙️ Stack Tecnológico
-
-Sé muy específico con las versiones para evitar conflictos.
-
-* **Backend:** **Java 8 (JDK 1.8)**, **Spring Boot 2.7.18**.
-* **Persistencia:** Spring Data JPA, Hibernate.
-* **Base de Datos:** **PostgreSQL** (Aiven Cloud/Docker).
-* **Vistas:** **Thymeleaf**, **Bootstrap 5**, Bootstrap Icons.
-* **Build Tool:** Maven.
-
----
-
-### 3. 🛠️ Configuración y Ejecución
-
-Esta sección es crucial para cualquier colaborador.
-
-#### Prerrequisitos
-* **Java 8 (JDK 1.8)**
-* **Maven**
-* **Docker** (Recomendado para desarrollo local de la DB)
 
 #### Pasos para Iniciar
 1.  **Clonar:** `git clone https://aws.amazon.com/es/what-is/repo/`
