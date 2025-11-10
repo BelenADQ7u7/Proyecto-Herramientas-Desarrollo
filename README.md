@@ -88,3 +88,4 @@ Usar **Docker** en tu proyecto Spring Boot significa que puedes **empaquetar** t
 
 En resumen, Docker te proporciona una **caja estandarizada** y autosuficiente para tu aplicación, haciendo el desarrollo más **predecible** y el despliegue más **sencillo**.
 
+---- Agregar gestión de indecentes 
