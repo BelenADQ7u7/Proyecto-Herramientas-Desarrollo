@@ -88,4 +88,43 @@ Usar **Docker** en tu proyecto Spring Boot significa que puedes **empaquetar** t
 
 En resumen, Docker te proporciona una **caja estandarizada** y autosuficiente para tu aplicación, haciendo el desarrollo más **predecible** y el despliegue más **sencillo**.
 
----- Agregar gestión de indecentes 
+---
+
+## 🐞 Gestión de Incidentes y Bugs
+
+Utilizamos **Trello** como sistema de seguimiento de incidentes ("Tracker") para registrar, organizar y comunicar todo lo que "no funciona como debería" o las tareas pendientes ("features").
+
+### 1. Convención de Tickets (Issue)
+
+Cada tarea o problema es una **tarjeta (Ticket)** con un identificador único.
+
+* **Formato de Título:** `[TIPO-ID]: Descripción concisa`
+* **Tipos de Ticket:**
+    * **BUG:** Indica un problema o error que "no funciona como debería" (Ej: `BUG-005: Contraseñas en texto plano`).
+    * **FEAT:** Indica una nueva funcionalidad a implementar (Ej: `FEAT-010: Integración de filtros de catálogo`).
+    * **TASK:** Tarea interna de refactorización o configuración (Ej: `TASK-003: Actualizar dependencia de Spring Boot`).
+
+### 2. Ciclo de Vida y Estado
+
+El estado de un ticket es representado por la columna de Kanban en Trello y muestra dónde está el problema en su ciclo de vida.
+
+| Estado (Columna) | Descripción |
+| :--- | :--- |
+| **Open / Backlog** | Recién creado o pendiente de priorización (Inicio del ciclo). |
+| **In Progress** | Alguien está trabajando activamente en el arreglo o la funcionalidad. |
+| **Resolved** | El desarrollador cree que la corrección está terminada y lista para ser probada (Testing/QA). |
+| **Closed** | El QA/Tester confirma que el error ya funciona correctamente (Fin del ciclo). |
+
+### 3. Prioridad y Severidad (Etiquetas)
+
+Todos los tickets de tipo **BUG** deben tener etiquetas de color que definan su impacto y urgencia.
+
+* **Prioridad (Urgencia para el Negocio):**
+    * **🔴 Alta:** Debe resolverse inmediatamente (ej: el Login no funciona).
+    * **🟡 Media:** Es importante pero no bloquea el uso (ej: un error visual menor).
+    * **🟢 Baja:** Problema estético o corrección de texto.
+
+* **Severidad (Daño al Usuario):**
+    * **🟥 Bloqueante:** Impide completamente que el usuario realice una acción crítica (ej: Error al Guardar Producto).
+    * **🟧 Crítica:** Causa daño significativo o muestra datos incorrectos (ej: Contraseñas en texto plano).
+    * **🟦 Menor:** Problema que afecta la experiencia pero no la funcionalidad principal.
