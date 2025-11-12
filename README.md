@@ -14,10 +14,6 @@ Actualmente, el módulo de administración ya cuenta con **vistas HTML iniciales
 
 Se ha puesto especial atención en la **mejora de la apariencia visual** de la aplicación web para asegurar su **alineación con el manual de marca** de la empresa. Esto abarcó la aplicación coherente de la **paleta de colores** corporativa y la estandarización de los **componentes de la interfaz** (botones, tarjetas, tipografía), lo que resulta en una experiencia de usuario más profesional y consistente.
 
-Adicionalmente, se **mejoró la barra de navegación ($nav$)** para enriquecer la funcionalidad del usuario final. Específicamente, se incorporaron dos elementos esenciales:
-
-1.  Un **apartado de Carrito de Compras**, que facilita la gestión de los productos seleccionados antes de finalizar la compra.
-2.  Un ícono o **apartado de Usuario ($user$)**, que proporciona acceso rápido a las funcionalidades de perfil, historial de pedidos e inicio/cierre de sesión.
 
 ***
 
