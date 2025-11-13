@@ -66,10 +66,7 @@ Trello es extremadamente simple y flexible, adaptándose bien a los cambios que 
 
 Cambios Rápidos: Si el cliente decide cambiar la prioridad o si surge un error crítico, es muy fácil mover la tarjeta a la columna de máxima prioridad o crear una nueva tarjeta de "Bug Fix" en el Backlog.
 
-Integración con GitHub: Existen integraciones que te permiten vincular tarjetas de Trello con commits o ramas específicas en GitHub, mejorando la trazabilidad del código. Por ejemplo, una vez que terminas el código en tu rama diaz, puedes marcar la tarjeta como "Testing".
 
-
-Usar **Docker** en tu proyecto Spring Boot significa que puedes **empaquetar** tu aplicación y sus dependencias (como Java 8) para que **funcione exactamente igual** en cualquier lugar.
 
 ---
 
