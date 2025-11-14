@@ -1,4 +1,4 @@
-
+package com.example.drogueria.service;
 import com.example.drogueria.entity.Producto;
 import com.example.drogueria.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
