@@ -1,6 +1,7 @@
 # Proyecto-Herramientas-Desarrollo
 Gestión de Proyecto: https://trello.com/invite/b/6908e7bf23cfb2c99076e476/ATTI97d8ed433849dbc2f7e7d43fa073599fB48BF216/proyecto-herramientas-desarrollo
-
+- Agregar captura de la gestión de proyectos.
+  
 -- Resumen: 
 ## Desarrollo y Estructura del Módulo de Administración
 
