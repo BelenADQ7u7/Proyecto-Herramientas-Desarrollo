@@ -80,7 +80,6 @@ Cambios Rápidos: Si el cliente decide cambiar la prioridad o si surge un error 
 | **3. Despliegue Simplificado** | Subir y configurar la aplicación en un servidor. | Creas una **única imagen portable** que puede ser ejecutada con un solo comando en cualquier servidor (producción o desarrollo), haciendo el despliegue más rápido y fiable. |
 | **4. Portabilidad** | Dificultad para migrar de un servidor a otro. | Tu aplicación se vuelve **fácil de mover** (de tu PC a Vercel/Render, o a cualquier otro proveedor de nube) porque lleva su entorno consigo. |
 
-En resumen, Docker te proporciona una **caja estandarizada** y autosuficiente para tu aplicación, haciendo el desarrollo más **predecible** y el despliegue más **sencillo**.
 
 ---
 
