@@ -19,10 +19,6 @@ Se ha puesto especial atención en la **mejora de la apariencia visual** de la a
 
 ## Investigación de Portabilidad y Estrategia de Despliegue
 
-Como fase crucial del cierre del proyecto, se procederá a **investigar las opciones de portabilidad** más adecuadas para el despliegue de la aplicación web. El objetivo es identificar la **infraestructura y la tecnología de contenedores** óptimas que permitan un despliegue **eficiente, escalable y reproducible** en diferentes entornos de servidor (producción, pruebas, desarrollo). Esta investigación cubrirá la selección de plataformas de alojamiento y las herramientas de $CI/CD$ necesarias para garantizar una transición fluida al entorno de producción.
-
-
-
 Beneficios de Trello para tu Proyecto
 1. Visibilidad y Seguimiento del Progreso
 Trello te permite ver el estado actual de todas las características y tareas de un vistazo.
