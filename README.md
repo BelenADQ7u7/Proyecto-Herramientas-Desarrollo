@@ -35,7 +35,6 @@ Review/Testing: Tareas completas que esperan ser probadas (Ej: "Probar el formul
 
 Done (Terminado): Tareas finalizadas y fusionadas con el proyecto principal.
 
-Identificación de Bloqueos: Si una tarjeta se queda mucho tiempo en una columna, es una señal visual inmediata de que hay un problema o un bloqueo que requiere atención (Ej: el error con la contraseña de GitHub).
 
 2. Organización Detallada de Tareas (Tarjetas)
 Cada tarea, requisito o bug se convierte en una tarjeta (Card), la unidad de trabajo principal.
